@@ -1,0 +1,19 @@
+{
+    "classes": [
+        "main-container",
+        "button",
+        "mat-form-field-appearance-legacy",
+        "mat-form-field-underline",
+        "mat-radio-outer-circle",
+        "mat-select-arrow",
+        "mat-form-field-label",
+        "mat-form-field-prefix",
+        "mat-icon-button",
+        "mat-form-field-suffix",
+        "mat-radio-label-content",
+        "mat-select-value-text",
+        "dialog_box",
+        "material-icons",
+        "cdk-overlay-dark-backdrop"
+    ]
+}

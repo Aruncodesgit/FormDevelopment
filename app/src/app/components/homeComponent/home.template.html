@@ -1,0 +1,40 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="false" [fxHide]="false">
+  <form [formGroup]="registerForm">
+    <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+      <input matInput placeholder="Name" [required]="false" formControlName="name">
+      <mat-error align="start" *ngIf="registerForm.controls.name.errors?.requied">Name field cant be empty</mat-error>
+      <mat-error align="start" *ngIf="registerForm.controls.name.errors?.maxlength">Max only 15 characters</mat-error>
+      <mat-error align="start" *ngIf="registerForm.controls.name.errors?.minlength">Min length atleast 3 characters</mat-error>
+    </mat-form-field>
+    <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+      <input matInput placeholder="Email" [required]="false" formControlName="email">
+
+    </mat-form-field>
+    <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+      <input matInput placeholder="Phone" [required]="false" formControlName="phone">
+
+    </mat-form-field>
+    <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+      <mat-select formControlName="select" placeholder="Select City" [required]="false">
+        <mat-option [value]="&apos;Bangalore&apos;" disabled="false">Bangalore</mat-option>
+        <mat-option [value]="&apos;Chennai&apos;" disabled="false">Chennai</mat-option>
+      </mat-select>
+
+    </mat-form-field>
+    <mat-radio-group formControlName="gender" [labelPosition]="&apos;before&apos;" [required]="false">
+      <mat-radio-button [value]="1" [required]="false" [labelPosition]="&apos;before&apos;" [checked]="false">Male</mat-radio-button>
+      <mat-radio-button [value]="2" style="margin-left:10px;" [required]="false" [labelPosition]="&apos;before&apos;">Female</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field style="margin-top:10px;" [appearance]="&apos;legacy&apos;">
+      <input matInput placeholder="Date of Birth" [matDatepicker]="picker" formControlName="date" [max]="maxDate" [required]="false" [disabled]="false">
+      <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+      <mat-datepicker #picker id="datePicker" [disabled]="false"></mat-datepicker>
+
+    </mat-form-field>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div>
+        <button type="submit" class="button" [disabled]="!registerForm.valid" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

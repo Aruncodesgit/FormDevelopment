@@ -1,0 +1,95 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+
+body { 
+    background-image: linear-gradient(to right, #1765b3, #d290bc);
+    color:#777777;
+    font-family: sans-serif;
+}
+.main-container {
+    border-radius: 20px;
+    background-color: #061b2d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width:300px;
+    height:auto;
+    padding: 20px;
+    margin: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top:40px;
+    color:#fff;
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .button {
+        background-color: #e2e2e2;
+        color:#000;
+        border-radius: 0px;
+        width:100px;
+        height:50px;
+        border:none;
+        cursor:pointer;
+        
+    }
+    .button:hover {
+        transition-delay: 0.5s;
+        transition-duration: 0.5s;
+        background-color: #fff;
+        color:#000;
+    }
+}
+mat-form-field {
+    width:100%;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: rgba(255,255,255,.54);
+}
+.mat-radio-outer-circle {
+    border-color: rgba(255,255,255,.54); 
+}
+.mat-select-arrow {
+    color: rgba(255,255,255,.54);
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+    color: rgba(255,255,255,.54);
+}
+.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button, .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button {
+    font: inherit;
+    vertical-align: baseline;
+    color: rgba(255,255,255,.54);
+}
+.mat-radio-label-content {
+    color: rgba(255,255,255,.54);
+}
+.mat-select-value-text { 
+    color: #fff;
+}
+.dialog_box {
+   background-color: #fff; 
+   margin:auto;
+   text-align: center;
+   width:300px; 
+   .material-icons {
+        color:#36b916;
+        border: 2px solid #36b916;
+        border-radius: 100%;
+        padding: 10px;
+        font-size: 70px;
+   }
+}
+.cdk-overlay-dark-backdrop {
+    background: rgba(0,0,0,.82);
+}
+
+@media(max-width:767px) {
+    .dialog_box { 
+        width:100%; 
+    }
+}
